@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>US - American Housing Author</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="main.css" />
+		<style>
+			.label {
+				display: none;
+			}
+		</style>
+		<!-- If you use a build tool, reference the SCSS file for development -->
+		<link rel="stylesheet" href="main.scss" />
+		<link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dq6xqk5au/image/upload/v1759173279/White_hq309q.png">
+		
+	</head>
+	<body class="is-preload">
+
+		<div class="content-wrapper" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 2em; width: 100%;">
+			<!-- Header -->
+			<div class="header-content" style="flex: 1;">
+				<header id="header">
+					<div style="display: flex; align-items: center; padding: 0;">
+						<img src="https://res.cloudinary.com/dq6xqk5au/image/upload/v1759173279/White_hq309q.png" alt="Logo" style="height: 9em; margin-right: 0.5em; margin-bottom: 0em;">
+					</div>
+					<h1 style="margin: 0; margin-top: 0em;font-size: 60px;">Connect Right Now <br> with High-Paying <br> Construction Jobs <br/>  </h1> 					
+					<h3 style="margin-top: 1em;font-size: 20px">Powered by whole engine systems on Social Media  <br/> </h3> 	
+				</header>
+
+				<div style="display: flex; align-items: center; padding: 0 0 0 0;margin-top: 0.5em; font-size: 17px">
+					<p> Get free eBooks, Promotions <strong> & Find Out if you're a fit </strong></p>
+				</div>
+			</div>
+			<!-- Signup Form -->
+			<div class="form-content" style="flex: 1; padding-top: 9em;">
+		 
+				<form id="contact-form">
+					<div class="form-group">
+					<label for="name" class="visually-hidden">Name</label>
+					<input type="text" id="name" name="name" placeholder="Enter your name" aria-label="Name" required>
+				</div>
+
+				<div class="form-group">
+					<label for="email" class="visually-hidden">Email</label>
+					<input type="email" id="email" name="email" placeholder="Enter your email" aria-label="Email" required>
+				</div>
+
+				<div class="form-group phone-group">
+				<label for="phone"></label>
+				<div class="phone-input-wrapper">
+					<select id="country-code" name="country_code" required>
+					<option value="+1" selected>🇺🇸 +1 (US)</option>
+					<option value="+44">🇬🇧 +44 (UK)</option>
+					<option value="+44">🇨🇦 +1 (CA)</option>
+
+					
+						<!-- more -->
+					</select>
+					<input type="tel" id="phone" name="phone" pattern="[0-9]{6,15}" placeholder="&nbsp;&nbsp;Enter Phone Number" required>
+				</div>
+				</div>
+
+  <!-- SMS Consent Checkbox -->
+<div class="form-group sms-consent">
+  <div class="checkbox-wrapper">
+    <input type="checkbox" id="sms-consent" required>
+    <label for="sms-consent" class="sms-label">
+      I agree to receive recurring SMS messages <br> from American housing Author. <br> Message & data rates may apply.   Frequency varies. <br> Text HELP for help,  STOP to cancel. <br> Consent is not a condition of service.
+    </label>
+  </div>
+</div>
+
+  <button type="submit" id="submit-button"> <a href="https://res.cloudinary.com/dq6xqk5au/image/upload/v1759173279/White_hq309q.png"></a>CONTACT ME</button>
+</form>
+			</div>
+		</div>
+
+		<footer id="footer" style="opacity: 1; position: relative; bottom: auto; left: auto; margin-top: 2em; color: rgba(255,255,255,0.85);">
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li> 
+				</ul>
+				<ul class="copyright" style="opacity: 0.2; width: 100%; text-align: left;">
+					<li><a href="http://html5up.net">2025 American Housing Author </a> &copy; All Rights Reserved </li>
+					<li><a href="http://html5up.net">HTML5 UP</a></li>
+					<li><a href="assets/css/noscript.css" style="text-decoration: none;"> Terms and Conditions </a></li>
+					<li><a href="assets/css/noscript.css" style="text-decoration: none;"> Privacy Policy </a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="main.js"></script>
+			
+			<script>
+			document.getElementById('contact-form').addEventListener('submit', async function(e) {
+			e.preventDefault();
+
+			const form = e.target;
+
+			const data = {
+				name: form.name.value.trim(),
+				email: form.email.value.trim(),
+				country_code: form['country_code'].value,
+				phone: form.phone.value.trim(),
+				sms_consent: form['sms-consent'].checked
+			};
+
+			const scriptURL = "https://script.google.com/macros/s/AKfycbwlldZ5EGMsYNJj5cNRTVuKizc4wNx2nF66aSyM-SuQIAuXHKGovEzvOcCyRx7ouVSl/exec"; // <-- replace with actual Apps Script URL
+
+			try {
+				const response = await fetch(scriptURL, {
+				method: 'POST',
+				mode: 'no-cors',
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded'
+				},
+				body: new URLSearchParams(data)
+				});
+
+				alert('Thank you! We\'ll review your submission and get back to you soon.');
+				form.reset();
+			} catch (error) {
+				alert('There was an error submitting the form.');
+				console.error('Form submission error:', error);
+			}
+			});
+			</script>
+			
