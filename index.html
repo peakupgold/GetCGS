@@ -7,7 +7,31 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="main.css" />
 		<style>
-		
+			.label {
+				display: none;
+			}
+			
+			/* Mobile responsive logo centering - only for mobile */
+			@media (max-width: 768px) {
+				#header div {
+					justify-content: center !important;
+				}
+				#header img {
+					margin-left: auto !important;
+					margin-right: auto !important;
+					display: block !important;
+				}
+			}
+			
+			@media (max-width: 480px) {
+				#header img {
+					height: auto !important;
+					width: 40% !important;					
+					margin-left: auto !important;
+					margin-right: auto !important;
+					display: block !important;
+				}
+			}
 		</style>
 		<!-- If you use a build tool, reference the SCSS file for development -->
 		<link rel="stylesheet" href="main.scss" />
@@ -35,7 +59,7 @@
 			<!-- Header -->
 			<div class="header-content" style="flex: 1;">
 				<header id="header">
-					<div style="display: flex; align-items: center; justify-content: center; padding: 0;">
+					<div style="display: flex; align-items: center; padding: 0;">
 						<img src="https://res.cloudinary.com/dq6xqk5au/image/upload/v1759173279/White_hq309q.png" alt="Logo" style="height: 9em; margin-right: 0.5em; margin-bottom: 0em;">
 					</div>
 					<h1 style="margin: 0; margin-top: 0em;font-size: 60px;">Connect Right Now <br> with High-Paying <br> Construction Jobs <br/>  </h1> 					
@@ -85,7 +109,7 @@
   </div>
 </div>
 
-  <button type="submit" id="submit-button"> <a href="https://res.cloudinary.com/dq6xqk5au/image/upload/v1759173279/White_hq309q.png"></a>CONTACT ME</button>
+  <button type="submit" id="submit-button"> <a href="https://res.cloudinary.com/dq6xqk5au/image/upload/v1759173279/White_hq309q.png"></a>&nbsp&nbsp&nbsp Join Now &nbsp&nbsp&nbsp </button>
 </form>
 			</div>
 		</div>

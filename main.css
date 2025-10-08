@@ -822,7 +822,7 @@ input[type="submit"],
   input[type="button"],
   button,
   .button {
-    padding: 5px 0; } }/* Header */
+    padding: 8px 0; } }/* Header */
 #header h1 {
   font-size: 3.25em;
   margin: 0 0 0.55em 0; }
@@ -1185,7 +1185,7 @@ select {
   button {
     width: 100%;
     margin-left: 0;
-    padding: 7px 0;
+    padding: 15 px 0;
   }
 }
 
