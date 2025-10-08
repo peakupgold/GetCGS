@@ -456,6 +456,52 @@ ul.icons {
     ul.icons li a {
       color: inherit; }
 
+
+.label {
+			display: none;
+		}
+			
+		/* Mobile responsive logo centering */
+		@media (max-width: 768px) {
+			#header div {
+				justify-content: center !important;
+			}
+			#header img {
+				margin-left: auto !important;
+				margin-right: auto !important;
+        margin-top: -1.8em !important;
+				display: block !important;
+        width: 40% !important;
+        height: auto !important;
+			}
+
+      #header h1 {
+        font-size: 4em !important;
+      }
+
+      
+		}
+		@media (max-width: 480px) {
+			#header img {
+				height: 6em !important;
+        margin-top: -1.8em !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+				display: block !important;
+        width: 40% !important;
+        height: auto !important;
+
+			}
+
+      #header h1 {
+        font-size: 3em !important;
+      }
+
+
+		}
+
+
+
 /* Form */
 form {
   margin: 0 0 2em 0; }
